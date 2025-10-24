@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/л33.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-block container">
+            <nav class="nav">
+                <div class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu1">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                </div>
+
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/image/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="menu2">
+                    <a href="vhod.html">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <p>Войти</p>
+                    </a>
+                    <!--     <a href="">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <p>Избранное</p>
+                    </a> -->
+                    <!-- <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <p>Корзина</p>
+                    </a> -->
+                </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                    <a href="#">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <span>Войти</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <span>Избранное</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <span>Корзина</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="auth-section">
+        <div class="auth-container">
+            <h2>Регистрация</h2>
+            <form class="auth-form">
+                <label>Имя пользователя</label>
+                <input type="text" placeholder="Введите имя">
+
+                <label>Email</label>
+                <input type="email" placeholder="email@gmail.com">
+
+                <label>Пароль</label>
+                <input type="password" placeholder="Введите пароль">
+
+                <label>Подтвердите пароль</label>
+                <input type="password" placeholder="Повторите пароль">
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p class="auth-note">Уже есть аккаунт? <a href="vhod.html">Войти</a></p>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <img src="assets/image/logo/logo.png" alt="Логотип" class="footer-logo" />
+
+            <nav class="footer-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="#faq">Частые вопросы</a>
+            </nav>
+
+            <div class="footer-line"></div>
+
+            <p class="footer-author">Шабанова Алёна 4.27</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.getElementById('burgerMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            burgerMenu.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    burgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 393) {
+                    burgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

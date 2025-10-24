@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/л33.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-block container">
+            <nav class="nav">
+                <div class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu1">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                </div>
+
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/image/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="menu2">
+                    <a href="vhod.html">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <p>Войти</p>
+                    </a>
+                    <!--     <a href="">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <p>Избранное</p>
+                    </a> -->
+                    <!-- <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <p>Корзина</p>
+                    </a> -->
+                </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                    <a href="#">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <span>Войти</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <span>Избранное</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <span>Корзина</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- Левая часть — текст -->
+                <div class="about-text">
+                    <h1>Тепло в каждой детали</h1>
+                    <p>
+                        Мы создаём не просто свечи, а атмосферу уюта и гармонии.
+                        Каждое изделие рождается с любовью к деталям, вдохновлено природой
+                        и призвано приносить тепло в ваш дом.
+                    </p>
+                    <a href="/catalog" class="btn-main">В каталог</a>
+                </div>
+
+                <!-- Правая часть — слайдер -->
+                <div class="about-slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="assets/image/slider/img1.jpg" alt="Процесс создания" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/image/slider/img2.jpg" alt="Мастерская" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/image/slider/img3.jpg" alt="Коллекция свечей" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/image/slider/img4.jpg" alt="Коллекция свечей" />
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev">‹</button>
+                        <button class="next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок загрузки документов -->
+            <div class="about-downloads">
+                <h2>Скачайте наши материалы</h2>
+                <div class="downloads">
+                    <a href="files/catalog.pdf" download class="download-btn">
+                        <span>⬇</span> Каталог свечей
+                    </a>
+                    <a href="files/price-list.xlsx" download class="download-btn">
+                        <span>⬇</span> Прайс-лист
+                    </a>
+                    <a href="files/guide.pdf" download class="download-btn">
+                        <span>⬇</span> Гид по ароматам
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <img src="assets/image/logo/logo.png" alt="Логотип" class="footer-logo" />
+
+            <nav class="footer-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="#faq">Частые вопросы</a>
+            </nav>
+
+            <div class="footer-line"></div>
+
+            <p class="footer-author">Шабанова Алёна 4.27</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+<style>
+    .about {
+        background: #f9f8f5;
+        color: #2e2e2e;
+        font-family: "Inter", sans-serif;
+        padding: 80px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    /* Текстовая часть */
+    .about-text {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .about-text h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .btn-main {
+        display: inline-block;
+        background: #f1ede5;
+        color: #2e2e2e;
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+        background: #e5e0d5;
+        transform: translateY(-2px);
+    }
+
+    /* Слайдер */
+    .about-slider {
+        position: relative;
+        flex: 1;
+        min-width: 320px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        user-select: none;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .slider-controls {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        pointer-events: none;
+    }
+
+    .slider-controls button {
+        pointer-events: auto;
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .slider-controls button:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+    }
+
+    /* Блок с документами */
+    .about-downloads {
+        text-align: center;
+    }
+
+    .about-downloads h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .downloads {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .download-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #f1ede5;
+        color: #2e2e2e;
+        padding: 12px 26px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+        background: #e5e0d5;
+        transform: translateY(-2px);
+    }
+
+    .download-btn span {
+        font-size: 18px;
+    }
+
+    /* Адаптив */
+    @media (max-width: 900px) {
+        .about-content {
+            flex-direction: column;
+        }
+
+        .about-text h1 {
+            font-size: 34px;
+            text-align: center;
+        }
+
+        .about-text p {
+            text-align: center;
+        }
+
+        .btn-main {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelector(".slides");
+        const slideItems = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+        let index = 0;
+        const total = slideItems.length;
+
+        function showSlide() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            index = (index + 1) % total;
+            showSlide();
+        }
+
+        function prevSlide() {
+            index = (index - 1 + total) % total;
+            showSlide();
+        }
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        setInterval(nextSlide, 5000);
+    });
+</script>

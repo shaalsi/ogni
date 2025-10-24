@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/image/л33.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header-block container">
+      <nav class="nav">
+        <div class="burger-menu" id="burgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu1">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="#contact">Контакты</a>
+          <a href="about.html">О нас</a>
+        </div>
+
+        <div class="logo">
+          <a href="#">
+            <img src="assets/image/logo/logo.png" alt="logo">
+          </a>
+        </div>
+
+        <div class="menu2">
+          <a href="vhod.html">
+            <img src="assets/image/icon/user.svg" alt="Войти">
+            <p>Войти</p>
+          </a>
+          <!--     <a href="">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <p>Избранное</p>
+                    </a> -->
+          <!-- <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <p>Корзина</p>
+                    </a> -->
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="#contact">Контакты</a>
+          <a href="about.html">О нас</a>
+          <a href="#">
+            <img src="assets/image/icon/user.svg" alt="Войти">
+            <span>Войти</span>
+          </a>
+          <a href="#">
+            <img src="assets/image/icon/favourites.svg" alt="Избранное">
+            <span>Избранное</span>
+          </a>
+          <a href="#">
+            <img src="assets/image/icon/basket.svg" alt="Корзина">
+            <span>Корзина</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="checkout">
+    <div class="container checkout-container">
+      <!-- Левая часть — форма оформления -->
+      <div class="checkout-form">
+        <h2>Оформление заказа</h2>
+
+        <form>
+          <div class="form-block">
+            <h3>Контактная информация</h3>
+            <div class="form-row">
+              <input type="text" placeholder="Имя*" required />
+              <input type="text" placeholder="Фамилия*" required />
+            </div>
+            <div class="form-row">
+              <input type="email" placeholder="Email*" required />
+              <input type="tel" placeholder="Телефон*" required />
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Информация о доставке</h3>
+            <div class="form-row">
+              <input type="text" placeholder="Город*" required />
+              <input type="text" placeholder="Улица*" required />
+            </div>
+            <div class="form-row">
+              <input type="text" placeholder="Дом*" required />
+              <input type="text" placeholder="Квартира" />
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Доставка</h3>
+            <label class="radio">
+              <input type="radio" name="delivery" checked />
+              <span>Почта России</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="delivery" />
+              <span>Доставка курьером по Казани</span>
+            </label>
+          </div>
+
+          <div class="form-block">
+            <h3>Оплата</h3>
+            <label class="radio">
+              <input type="radio" name="payment" checked />
+              <span>Картой онлайн</span>
+            </label>
+            <div class="form-row">
+              <input type="text" placeholder="Номер карты*" />
+              <input type="text" placeholder="Срок действия*" />
+            </div>
+            <div class="form-row">
+              <input type="text" placeholder="Владелец карты*" />
+              <input type="text" placeholder="CVC*" />
+            </div>
+
+            <label class="radio">
+              <input type="radio" name="payment" />
+              <span>Картой при получении</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="payment" />
+              <span>Наличными при получении</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-primary">Приобрести</button>
+        </form>
+      </div>
+
+      <!-- Правая часть — итог заказа -->
+      <div class="checkout-summary">
+        <h2>Ваш заказ</h2>
+
+        <div class="order-item">
+          <img src="img/item1.jpg" alt="Товар 1" />
+          <div>
+            <p class="item-title">Свеча «Капучино»</p>
+            <p class="item-price">850 ₽</p>
+          </div>
+        </div>
+
+        <div class="order-item">
+          <img src="assets/image/catalog/img1.png" alt="Товар 2" />
+          <div>
+            <p class="item-title">Свеча «Ваниль»</p>
+            <p class="item-price">890 ₽</p>
+          </div>
+        </div>
+
+        <div class="order-item">
+          <img src="img/item3.jpg" alt="Товар 3" />
+          <div>
+            <p class="item-title">Свеча «Мишка Умка»</p>
+            <p class="item-price">990 ₽</p>
+          </div>
+        </div>
+
+        <div class="order-total">
+          <p>Доставка: <span>1200 ₽</span></p>
+          <p class="total">Итого: <span>3930 ₽</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .checkout {
+      padding: 60px 0;
+      font-family: "Inter", sans-serif;
+      color: #2e2e2e;
+    }
+
+    .checkout-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .checkout-form,
+    .checkout-summary {
+      flex: 1;
+      min-width: 340px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .form-block {
+      margin-bottom: 30px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background: #faf9f7;
+      font-size: 14px;
+    }
+
+    .radio {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background-color: #f3f0e6;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #ebe8dd;
+    }
+
+    .order-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .order-item img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .item-title {
+      font-size: 15px;
+    }
+
+    .item-price {
+      font-weight: 600;
+    }
+
+    .order-total {
+      border-top: 1px solid #ddd;
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+
+    .order-total p {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .total {
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .checkout-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <img src="assets/image/logo/logo.png" alt="Логотип" class="footer-logo" />
+
+      <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">О нас</a>
+        <a href="#faq">Частые вопросы</a>
+      </nav>
+
+      <div class="footer-line"></div>
+
+      <p class="footer-author">Шабанова Алёна 4.27</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerMenu = document.getElementById('burgerMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      burgerMenu.addEventListener('click', function () {
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          burgerMenu.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 393) {
+          burgerMenu.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

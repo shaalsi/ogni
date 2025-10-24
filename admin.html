@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/л33.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-block container">
+            <nav class="nav">
+                <div class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu1">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                </div>
+
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/image/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="menu2">
+                    <a href="vhod.html">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <p>Войти</p>
+                    </a>
+                    <!--     <a href="">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <p>Избранное</p>
+                    </a> -->
+                    <!-- <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <p>Корзина</p>
+                    </a> -->
+                </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="about.html">О нас</a>
+                    <a href="#">
+                        <img src="assets/image/icon/user.svg" alt="Войти">
+                        <span>Войти</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/favourites.svg" alt="Избранное">
+                        <span>Избранное</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/image/icon/basket.svg" alt="Корзина">
+                        <span>Корзина</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="admin-container">
+        <div class="admin-panel">
+            <aside class="admin-sidebar">
+                <ul>
+                    <li class="active" data-tab="add">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt=""> Добавление товара
+                    </li>
+                    <li data-tab="edit">
+                        <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" alt=""> Редактирование товара
+                    </li>
+                    <li data-tab="delete">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt=""> Удаление товара
+                    </li>
+                    <li data-tab="users">
+                        <img src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt=""> Пользователи
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="admin-content">
+                <!-- Добавление товара -->
+                <div class="tab-content active" id="add">
+                    <h2>Добавление товара</h2>
+                    <form class="admin-form">
+                        <label>Название товара</label>
+                        <input type="text" placeholder="Введите название">
+
+                        <label>Описание</label>
+                        <textarea placeholder="Введите описание"></textarea>
+
+                        <label>Цена</label>
+                        <input type="number" placeholder="₽">
+
+                        <label>Изображение</label>
+                        <input type="file" accept="image/*">
+
+                        <button type="submit">Добавить товар</button>
+                    </form>
+                </div>
+
+                <!-- Редактирование -->
+                <div class="tab-content" id="edit">
+                    <h2>Редактирование товара</h2>
+                    <form class="admin-form">
+                        <label>Выберите товар</label>
+                        <select>
+                            <option>Свеча Мишка Умка</option>
+                            <option>Свеча Ваниль</option>
+                        </select>
+
+                        <label>Новое описание</label>
+                        <textarea placeholder="Введите новое описание"></textarea>
+
+                        <label>Новая цена</label>
+                        <input type="number" placeholder="₽">
+
+                        <button type="submit">Сохранить изменения</button>
+                    </form>
+                </div>
+
+                <!-- Удаление -->
+                <div class="tab-content" id="delete">
+                    <h2>Удаление товара</h2>
+                    <div class="delete-list">
+                        <div class="delete-item">
+                            <span>Свеча Мишка Умка</span>
+                            <button class="delete-btn">Удалить</button>
+                        </div>
+                        <div class="delete-item">
+                            <span>Свеча Ваниль</span>
+                            <button class="delete-btn">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пользователи -->
+                <div class="tab-content" id="users">
+                    <h2>Пользователи</h2>
+                    <div class="user-list">
+                        <div class="user-item">
+                            <p><strong>Имя:</strong> Алина</p>
+                            <p><strong>Email:</strong> alina@gmail.com</p>
+                        </div>
+                        <div class="user-item">
+                            <p><strong>Имя:</strong> Иван</p>
+                            <p><strong>Email:</strong> ivan@mail.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <img src="assets/image/logo/logo.png" alt="Логотип" class="footer-logo" />
+
+            <nav class="footer-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="#faq">Частые вопросы</a>
+            </nav>
+
+            <div class="footer-line"></div>
+
+            <p class="footer-author">Шабанова Алёна 4.27</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.getElementById('burgerMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            burgerMenu.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    burgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 393) {
+                    burgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll(".admin-sidebar li").forEach(tab => {
+            tab.addEventListener("click", () => {
+                document.querySelectorAll(".admin-sidebar li").forEach(t => t.classList.remove("active"));
+                tab.classList.add("active");
+
+                const target = tab.getAttribute("data-tab");
+                document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+                document.getElementById(target).classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

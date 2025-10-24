@@ -1,0 +1,145 @@
+<section class="page-404">
+  <div class="particles" id="particles"></div>
+  <div class="container">
+    <div class="error-content">
+      <h1 id="parallax404"><span>4</span><span>0</span><span>4</span></h1>
+      <h2>Страница не найдена</h2>
+      <p>Кажется, вы заблудились. Страница, которую вы ищете, больше не существует или была перемещена.</p>
+      <a href="index.html" class="btn-home">На главную</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.page-404 {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #f9f8f5, #f2f1ed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+/* --- Плавающие частицы --- */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(220, 218, 212, 0.7);
+  border-radius: 50%;
+  animation: drift 12s infinite ease-in-out;
+}
+
+@keyframes drift {
+  0% { transform: translateY(100vh) translateX(0) scale(1); opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(30px) scale(0.7); opacity: 0; }
+}
+
+/* --- Контент --- */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.error-content {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.error-content h1 {
+  font-size: 180px;
+  font-weight: 700;
+  letter-spacing: -5px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: #e2dfd7;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.error-content h2 {
+  font-size: 26px;
+  margin: 25px 0 10px;
+  opacity: 0;
+  animation: fadeUp 1s 0.8s forwards;
+}
+
+.error-content p {
+  font-size: 16px;
+  color: #666;
+  max-width: 420px;
+  margin: 0 auto 35px;
+  opacity: 0;
+  animation: fadeUp 1s 1.2s forwards;
+}
+
+/* --- Кнопка --- */
+.btn-home {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 30px;
+  background: #efede8;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 1s 1.6s forwards;
+}
+
+.btn-home:hover {
+  background: #e6e4df;
+  transform: translateY(-3px);
+}
+
+/* --- Анимации появления --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+  .error-content h1 { font-size: 120px; }
+  .error-content h2 { font-size: 22px; }
+}
+</style>
+
+<script>
+// --- Параллакс для цифр 404 ---
+const parallax = document.getElementById('parallax404');
+document.addEventListener('mousemove', (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 40;
+  const y = (window.innerHeight / 2 - e.clientY) / 40;
+  parallax.style.transform = `rotateX(${y}deg) rotateY(${-x}deg)`;
+});
+
+// --- Создание частиц ---
+const particlesContainer = document.getElementById('particles');
+for (let i = 0; i < 30; i++) {
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.animationDelay = Math.random() * 10 + 's';
+  particle.style.width = particle.style.height = 6 + Math.random() * 6 + 'px';
+  particlesContainer.appendChild(particle);
+}
+</script>
